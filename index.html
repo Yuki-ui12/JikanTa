@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JikanTa - Informasi Fashion Trending</title>
+    <style>
+        /* Resetting default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling untuk seluruh halaman */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #111;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header .logo h1 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff9800;
+        }
+
+        /* Kategori Produk */
+        .categories {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .categories h2 {
+            margin-bottom: 40px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .category-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .category {
+            width: 200px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .category img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .category p {
+            margin-top: 15px;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        /* Daftar Produk */
+        .products {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .products h2 {
+            margin-bottom: 40px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            width: 250px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .product button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .product button:hover {
+            background-color: #ff9800;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Video Section */
+        .video-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .video {
+            width: 280px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .video video {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        footer a {
+            color: #ff9800;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>JikanTa</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produk</a></li>
+                <li><a href="#">Informasi</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Kategori Produk -->
+    <section class="categories">
+        <h2>Kategori Produk</h2>
+        <div class="category-list">
+            <div class="category">
+                <img src="acc.png" alt="Aksesoris">
+                <p>Aksesoris</p>
+            </div>
+            <div class="category">
+                <img src="outfit.png" alt="Pakaian">
+                <p>Pakaian</p>
+            </div>
+            <div class="category">
+                <img src="shoes.png" alt="Sepatu">
+                <p>Sepatu</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daftar Produk -->
+    <section class="products">
+        <h2>Produk Terlaris</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="puma.png" alt="Puma Speedcat">
+                <h3>Puma Speedcat</h3>
+                <p>Harga: Rp 1.899.000</p>
+                <button><a href="https://id.puma.com/in/pd/sepatu-speedcat-og-unisex-sneakers/398846.html" target="_blank">Lihat Produk</a></button>
+            </div>
+            <div class="product">
+                <img src="onitsuka.png" alt="Onitsuka Tiger Mexico66">
+                <h3>Onitsuka Tiger Mexico66</h3>
+                <p>Harga: Rp.1,800,000</p>
+                <button><a href="https://www.onitsukatiger.com/id/id-id/product/mexico-66-slip-on/1183a746.751" target="_blank">Lihat Produk</a></button>
+            </div>
+            <div class="product">
+                <img src="adidas.png" alt="Adidas Samba">
+                <h3>Adidas Samba</h3>
+                <p>Harga: Rp. 2.200.000</p>
+                <button><a href="https://www.footlocker.id/adidas-samba-og-men-s-sneaker-shoes-ftwr-white-1.html" target="_blank">Lihat Produk</a></button>
+            </div>
+            <div class="product">
+                <img src="nike air.png" alt="Nike Air Force 1 '07">
+                <h3>Nike Air Force 1 '07</h3>
+                <p>Harga: Rp 1.549.000</p>
+                <button><a href="https://www.nike.com/id/t/air-force-1-07-shoes-WrLlWX/CW2288-111" target="_blank">Lihat Produk</a></button>
+            </div>
+            <div class="product">
+                <img src="converse.png" alt="Converse Chuck Taylor All Star">
+                <h3>Converse Chuck Taylor All Star</h3>
+                <p>Harga: Rp. 899.000</p>
+                <button><a href="https://www.converse.id/chuck-taylor-all-star-hi-unisex-red.html" target="_blank">Lihat Produk</a></button>
+            </div>
+            <div class="product">
+                <img src="NB530.png" alt="New Balance 530">
+                <h3>New Balance 530</h3>
+                <p>Harga: Rp 1.599.000</p>
+                <button><a href="https://www.zalora.co.id/p/new-balance-530-lifestyle-shoes-white-blue-4152245" target="_blank">Lihat Produk</a></button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- informasi -->
+    <section class="informasi">
+      <h2 style="text-align: center">Informasi</h2>
+      <p style="text-align: center">Website ini berisi tentang Fashion Outfit yang sedang Trending. Kamu mungkin bisa mencari barang yang kamu inginkan disini. Website ini bukan Online shop,  Website ini hanya tempat untuk mencari informasi tentang trend fashion saat ini.</p>
+    </section>
+    
+    <!-- Video -->
+    <section class="Fashion Film">
+        <h2 style="text-align:center">Fashion Film</h2>
+        <div class="video-list">
+            <div class="video">
+                <video controls autoplay muted>
+                    <source src="SHIBUYA FASHION WEEK 2020.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video">
+                <video controls autoplay muted>
+                    <source src="SHIBUYA FASHION WEEk.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video">
+                <video controls autoplay muted>
+                    <source src="SHIBUYA FASHION WEEK × Story by Story.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 JikanTa.com - Semua Hak Dilindungi</p>
+        <p>Website ini milik Dzaki Dirgahadi</p>
+        <p>Email: <a href="mailto:jikantaka@gmail.com">jikantaka@gmail.com</a></p>
+        <p>Telepon: +62 812 3456 7890</p>
+    </footer>
+</body>
+</html>
+0
